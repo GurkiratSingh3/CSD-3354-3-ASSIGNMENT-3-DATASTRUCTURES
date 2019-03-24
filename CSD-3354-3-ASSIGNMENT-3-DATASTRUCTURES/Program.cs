@@ -10,6 +10,14 @@ namespace CSD_3354_3_ASSIGNMENT_3_DATASTRUCTURES
 {
 
     public delegate void Sort_DataStructure();
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Student s = new Student();
+            DataStructureQueue d = new DataStructureQueue();
+        }
+    }
     class Student
     {
         String Student_name;
@@ -20,11 +28,6 @@ namespace CSD_3354_3_ASSIGNMENT_3_DATASTRUCTURES
 
         List<string> names = File.ReadAllLines(@"C:\Games\Semester\Visual studio\CSD-3354-2-ASSIGNMENT-3-DATASTRUCTURES\Names.txt").ToList();
         Random r1;
-        static void Main(string[] args)
-        {
-            Student s = new Student();
-            s.AverageStudentGPA();
-        }
         public Student()
         {
             r1 = new Random();
@@ -71,9 +74,11 @@ namespace CSD_3354_3_ASSIGNMENT_3_DATASTRUCTURES
         public Queue q1 = new Queue();
 
         Sort_DataStructure Sort1;
+
         public void Sorter()
         {
             // TO DO : sort the Queue 
+            
         }
         public void Run()
         {
@@ -96,6 +101,7 @@ namespace CSD_3354_3_ASSIGNMENT_3_DATASTRUCTURES
         public void Sorter()
         {
             // TO DO : sort the Stack
+        
         }
         public void Run()
         {
@@ -115,7 +121,6 @@ namespace BubbleSort
         static void Main2(string[] args)
 
         {
-
             int[] arr = { 78, 55, 45, 98, 13 };
 
             int temp;
