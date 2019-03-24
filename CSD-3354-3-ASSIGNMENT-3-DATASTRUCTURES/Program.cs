@@ -15,14 +15,13 @@ namespace CSD_3354_3_ASSIGNMENT_3_DATASTRUCTURES
         static void Main(string[] args)
         {
             Student p = new Student();
-            p.AverageStudentGPA();
+            p.pint();
         }
     }
     class Student
     {
         String Student_name;
-        String StudentID;
-        double StudentGPA;
+        double[] StudentID;
         // TODO: change this implementation so that the program pulls names from a Text File:
         // to do this, you must change the container for Student Names from Array to List
 
@@ -32,19 +31,23 @@ namespace CSD_3354_3_ASSIGNMENT_3_DATASTRUCTURES
         {
             r1 = new Random();
             Student_name = names[r1.Next(0, 4)];
-            StudentID = Convert.ToString(r1.Next(1000, 9999));
-            StudentGPA = Convert.ToDouble(r1.Next(1, 99));
+            StudentID = new double[names.Count];
+            for(int i = 0; i < names.Count; i++)
+            {
+                StudentID[i] = r1.Next(2, 90);;
+            }
         }
         public double AverageStudentGPA()
         {
             // TO DO: implement the algorithm to calculate the Students' average GPA
-            double[] student_GPA = new double[names.Count];
-            for(int i = 0; i <names.Count; i++)
-            {
-                student_GPA[i] = StudentGPA;
-                Console.WriteLine(student_GPA[i]);
-            }
             return 0;
+        }
+        public void pint()
+        {
+            for(int i =0; i <names.Count; i++)
+            {
+                Console.WriteLine(StudentID[i]);
+            }
         }
     }
     public interface IDataStructure
