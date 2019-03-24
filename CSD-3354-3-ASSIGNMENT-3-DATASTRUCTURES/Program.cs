@@ -15,6 +15,7 @@ namespace CSD_3354_3_ASSIGNMENT_3_DATASTRUCTURES
         static void Main(string[] args)
         {
             Student p = new Student();
+            p.AverageStudentGPA();
         }
     }
     class Student
@@ -37,7 +38,12 @@ namespace CSD_3354_3_ASSIGNMENT_3_DATASTRUCTURES
         public double AverageStudentGPA()
         {
             // TO DO: implement the algorithm to calculate the Students' average GPA
-
+            double[] student_GPA = new double[names.Count];
+            for(int i = 0; i <names.Count; i++)
+            {
+                student_GPA[i] = StudentGPA;
+                Console.WriteLine(student_GPA[i]);
+            }
             return 0;
         }
     }
