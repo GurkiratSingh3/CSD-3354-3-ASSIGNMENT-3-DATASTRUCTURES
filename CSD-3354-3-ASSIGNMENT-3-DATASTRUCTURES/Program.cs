@@ -15,7 +15,6 @@ namespace CSD_3354_3_ASSIGNMENT_3_DATASTRUCTURES
         static void Main(string[] args)
         {
             Student s = new Student();
-            DataStructureQueue d = new DataStructureQueue();
         }
     }
     class Student
@@ -78,11 +77,20 @@ namespace CSD_3354_3_ASSIGNMENT_3_DATASTRUCTURES
         public void Sorter()
         {
             // TO DO : sort the Queue 
-            
+            q1.Enqueue("Java-SAT-AM-A202");
+            q1.Enqueue("Csharp-MON-PM-B122");
+            q1.Enqueue("Math-FRI-AM-A506");
+            q1.Enqueue("BigData-THU-B230");
+            q1.Enqueue("Java-WED-PM-A202");
+            q1.Enqueue("Csharp-THU-PM-B125");
+            q1.Enqueue("Math-TUE-AM-B130");
+            q1.Enqueue("EmergingTechnologies-FRI-B122");
+            q1.Enqueue("MicrosoftDataStack-MON-PM-B122");
+            q1.Enqueue("Math-MON-PM-B122");
         }
         public void Run()
         {
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i <= 10; i++)
             {
                 q1.Enqueue(new Student());
             }
