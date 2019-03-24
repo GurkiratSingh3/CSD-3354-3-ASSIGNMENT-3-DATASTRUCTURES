@@ -10,44 +10,54 @@ namespace CSD_3354_3_ASSIGNMENT_3_DATASTRUCTURES
 {
 
     public delegate void Sort_DataStructure();
-    class Program
-    {
-        static void Main(string[] args)
-        {
-            Student p = new Student();
-            p.pint();
-        }
-    }
     class Student
     {
         String Student_name;
         double[] StudentID;
+        double[] StudentGPA;
         // TODO: change this implementation so that the program pulls names from a Text File:
         // to do this, you must change the container for Student Names from Array to List
 
         List<string> names = File.ReadAllLines(@"C:\Games\Semester\Visual studio\CSD-3354-2-ASSIGNMENT-3-DATASTRUCTURES\Names.txt").ToList();
         Random r1;
+        static void Main(string[] args)
+        {
+            Student s = new Student();
+            s.AverageStudentGPA();
+        }
         public Student()
         {
             r1 = new Random();
             Student_name = names[r1.Next(0, 4)];
+
             StudentID = new double[names.Count];
             for(int i = 0; i < names.Count; i++)
             {
-                StudentID[i] = r1.Next(2, 90);;
+                StudentID[i] = r1.Next(1000, 9999);;
+            }
+
+            StudentGPA = new double[names.Count];
+            for (int i = 0; i < names.Count; i++)
+            {
+                StudentGPA[i] = r1.Next(1, 99); ;
             }
         }
-        public double AverageStudentGPA()
+        public void AverageStudentGPA()
         {
             // TO DO: implement the algorithm to calculate the Students' average GPA
-            return 0;
-        }
-        public void pint()
-        {
-            for(int i =0; i <names.Count; i++)
+            double average = 0;
+            double num = 0;
+            Console.Write("Students GPA - ");
+            for(int i = 0; i < names.Count; i++)
             {
-                Console.WriteLine(StudentID[i]);
+                Console.Write(StudentGPA[i] + " ");
+                num += StudentGPA[i];
+                average = num / names.Count;
             }
+            Console.WriteLine(" ");
+                Console.WriteLine("The overall average of students GPA is " +average);
+
+            
         }
     }
     public interface IDataStructure
