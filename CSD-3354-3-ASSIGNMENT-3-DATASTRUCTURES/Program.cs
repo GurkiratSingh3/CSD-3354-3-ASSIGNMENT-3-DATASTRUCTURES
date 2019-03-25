@@ -15,6 +15,7 @@ namespace CSD_3354_3_ASSIGNMENT_3_DATASTRUCTURES
         static void Main(string[] args)
         {
             Student s = new Student();
+            DataStructureQueue a = new DataStructureQueue();
         }
     }
     class Student
