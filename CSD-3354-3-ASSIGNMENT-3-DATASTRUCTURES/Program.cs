@@ -15,6 +15,7 @@ namespace CSD_3354_3_ASSIGNMENT_3_DATASTRUCTURES
         static void Main(string[] args)
         {
             Student s = new Student();
+           s.Displaying_names();
             s.AverageStudentGPA();
         }
     }
@@ -28,7 +29,7 @@ namespace CSD_3354_3_ASSIGNMENT_3_DATASTRUCTURES
         // TODO: change this implementation so that the program pulls names from a Text File:
         // to do this, you must change the container for Student Names from Array to List
 
-        List<string> names = File.ReadAllLines(@"C:\names\Names.txt").ToList();
+        List<string> names = File.ReadAllLines(@"C:\Games\Semester\Visual studio\CSD-3354-2-ASSIGNMENT-3-DATASTRUCTURES\Names.txt").ToList();
         Random r1;
         public Student()
         {
@@ -47,6 +48,13 @@ namespace CSD_3354_3_ASSIGNMENT_3_DATASTRUCTURES
                 StudentGPA[i] = r1.Next(1, 99); ;
             }
         }
+        public void Displaying_names()
+            {
+                foreach(string i in names)
+                {
+                  Console.WriteLine(i);
+                }
+            }
         public double AverageStudentGPA()
         {
             // TO DO: implement the algorithm to calculate the Students' average GPA
