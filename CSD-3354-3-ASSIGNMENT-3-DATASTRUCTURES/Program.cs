@@ -12,6 +12,9 @@ namespace CSD_3354_3_ASSIGNMENT_3_DATASTRUCTURES
     public delegate void Sort_DataStructure();
     class Program
     {
+        /*Gurkirat Singh -C0731779
+         Robindeep Singh - C0723381
+         */
         static void Main(string[] args)
         {
             Student s = new Student();
